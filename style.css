@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.margin-top-5 {
+  margin-top: 5px;
+}
+
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-grey {
+  color: #b3b3b3;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.container {
+  display: flex;
+}
+
+#sidebar {
+  background-color: #040404;
+  width: 230px;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+
+}
+
+.menu {
+  padding-left: 20px;
+}
+
+.menu-bottom {
+  padding-left: 20px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+
+}
+
+#logo {
+  width: 140px;
+  padding-top: 25px;
+  display: block;
+}
+
+.menu i {
+  font-size: 24px;
+}
+
+.menu i, .menu-bottom i {
+  color: #b3b3b3;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.menu-bottom i {
+  font-size: 16px;
+}
+
+.menu ul li a {
+  padding-right: 50px;
+}
+
+ul span {
+  font-weight: 300;
+}
+
+#sidebar p.text-uppercase {
+  letter-spacing: 1px;
+}
+
+#install {
+  position: relative;
+}
+
+#install::after {
+  content: '';
+  background-color: #b3b3b3;
+  height: 1px;
+  width: 175px;
+  display: inline-block;
+  position: absolute;
+  bottom: -15px;
+  left: -30px;
+}
+
+#user {
+  display: block;
+}
+main {
+  background-color: red;
+  height: 100%;
+
+}
+
+footer {
+  height: 80px;
+  background-color: #282828;
+}
