@@ -25,6 +25,10 @@ a {
   margin-top: 30px;
 }
 
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -51,19 +55,17 @@ a {
   width: 230px;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 
 }
 
 .menu {
   padding-left: 20px;
+  height: 100%;
 }
 
 .menu-bottom {
   padding-left: 20px;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-
 }
 
 #logo {
@@ -72,7 +74,7 @@ a {
   display: block;
 }
 
-.menu i {
+.menu i, #user {
   font-size: 24px;
 }
 
@@ -98,23 +100,15 @@ ul span {
   letter-spacing: 1px;
 }
 
-#install {
-  position: relative;
+.installation-app {
+  border-bottom: 1px solid #b3b3b3;
+  margin-right: 45px;
+  padding: 10px 0px;
+  margin-bottom: 10px;
 }
 
-#install::after {
-  content: '';
-  background-color: #b3b3b3;
-  height: 1px;
-  width: 175px;
-  display: inline-block;
-  position: absolute;
-  bottom: -15px;
-  left: -30px;
-}
-
-#user {
-  display: block;
+.installation-app a:hover {
+  color: white;
 }
 
 main {
