@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+a:hover i, a:hover span, a:hover p {
+  color: white;
+}
+
 .margin-top-5 {
   margin-top: 5px;
 }
@@ -52,7 +56,7 @@ a {
 
 #sidebar {
   background-color: #040404;
-  width: 230px;
+  width: 100px;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -60,7 +64,7 @@ a {
 }
 
 .menu {
-  padding-left: 20px;
+  padding-left: 30px;
   height: 100%;
 }
 
@@ -71,10 +75,16 @@ a {
 #logo {
   width: 140px;
   padding-top: 25px;
-  display: block;
+  display: none;
 }
 
-.menu i, #user {
+#logo-smartphone {
+  color: white;
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+.menu i, #user, .menu-bottom i {
   font-size: 24px;
 }
 
@@ -82,10 +92,6 @@ a {
   color: #b3b3b3;
   display: inline-block;
   margin-right: 15px;
-}
-
-.menu-bottom i {
-  font-size: 16px;
 }
 
 .menu ul li a {
@@ -100,11 +106,19 @@ ul span {
   letter-spacing: 1px;
 }
 
+#sidebar span, #sidebar p {
+  visibility: hidden;
+}
+
 .installation-app {
   border-bottom: 1px solid #b3b3b3;
-  margin-right: 45px;
+  margin-right: 55px;
   padding: 10px 0px;
   margin-bottom: 10px;
+}
+
+.installation-app  span {
+  display: none;
 }
 
 .installation-app a:hover {
@@ -122,4 +136,85 @@ main {
 footer {
   height: 80px;
   background-color: #282828;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.album-cover {
+  position: relative;
+}
+
+.album-cover img {
+  width: 80%;
+  max-width: 64px;
+}
+
+.album-cover::after {
+  content: '\f004';
+  font-weight: bold;
+  font-family: "Font Awesome 5 Free";
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  top: 50%;
+  right: -30%;
+  transform: translate(-50%, -50%);
+  color: #b3b3b3;
+}
+
+.album-cover:hover::after {
+  color: white;
+}
+
+.album-cover p {
+  float: right;
+  margin-left: 20px;
+  text-align: center;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+.album-cover a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+@media (min-width: 768px) {
+
+  #logo {
+    width: 140px;
+    padding-top: 25px;
+    display: block;
+  }
+
+  #logo-smartphone {
+    display: none;
+  }
+
+  #sidebar {
+    width: 230px;
+  }
+
+  #sidebar span, #sidebar p {
+    visibility: visible;
+  }
+
+  .menu-bottom i {
+    font-size: 16px;
+  }
+
+  .installation-app {
+    margin-right: 45px;
+
+  }
+
+  .installation-app  span {
+    display: inline-block;
+  }
+
+  .album-cover img {
+    width: 100%;
+  }
 }
