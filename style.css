@@ -145,12 +145,17 @@ main {
 }
 
 .container-main {
-  max-width: 95%;
+  max-width: 85%;
   margin: 0 auto;
 }
 
 .main-menu ul {
-  margin: 0 auto;
+  text-align: center;
+  display: none;
+}
+
+.fa-bars {
+  color: white;
 }
 
 .main-menu ul li{
@@ -171,6 +176,8 @@ h1 {
   align-self: flex-start;
 
 }
+
+
 
 .artist-list {
   display: flex;
@@ -215,6 +222,7 @@ footer {
   align-items: center;
   text-align: center;
   line-height: 1.5;
+  padding-left: 20px;
 }
 
 .album-cover img {
@@ -247,8 +255,7 @@ i.fa-heart:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width:40%;
-
+  max-height: 100%;
 }
 
 .player-top {
@@ -261,6 +268,7 @@ i.fa-heart:hover {
 
 .player-bottom {
   align-self: center;
+  margin-right: 20px;
 }
 
 .player-button{
@@ -306,6 +314,21 @@ i.fa-heart:hover {
   display: none;
 }
 
+@media (min-width: 576px) {
+
+  .slider {
+    margin: 10px;
+    width: 250px;
+    appearance: none;
+    height: 2px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+  }
+
+}
+
 @media (min-width: 768px) {
 
   #logo {
@@ -327,8 +350,12 @@ i.fa-heart:hover {
     padding-left: 20px;
   }
 
-  #sidebar span, #sidebar p {
+  #sidebar span {
     display: inline-block;
+  }
+
+  #sidebar p {
+    display: block;
   }
 
   .installation-app {
@@ -363,6 +390,14 @@ i.fa-heart:hover {
     display: inline-block;
   }
 
+}
+
+@media (min-width: 992px) {
+
+  .main-menu ul {
+    display: block;
+  }
+
   .footer-option {
     display: block;
   }
@@ -375,4 +410,13 @@ i.fa-heart:hover {
     width: 30%;
     vertical-align: middle;
   }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .player-bottom {
+    margin-right: 0px;
+  }
+
 }
