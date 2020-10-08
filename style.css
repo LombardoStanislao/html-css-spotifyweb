@@ -68,12 +68,10 @@ a:hover i, a:hover span, a:hover p {
 }
 
 .menu {
-  padding-left: 30px;
   height: 100%;
 }
 
 .menu-bottom {
-  padding-left: 20px;
 }
 
 #logo {
@@ -88,18 +86,15 @@ a:hover i, a:hover span, a:hover p {
   margin-top: 50px;
 }
 
-.menu i, #user, .menu-bottom i {
-  font-size: 24px;
-}
-
 .menu i, .menu-bottom i {
   color: #b3b3b3;
   display: inline-block;
   margin-right: 15px;
+  font-size: 24px;
 }
 
-.menu ul li a {
-  padding-right: 50px;
+#sidebar ul, .menu-bottom, .installation-app{
+  text-align: center;
 }
 
 ul span {
@@ -111,14 +106,18 @@ ul span {
 }
 
 #sidebar span, #sidebar p {
-  visibility: hidden;
+  display: none;
 }
 
 .installation-app {
-  border-bottom: 1px solid #b3b3b3;
-  margin-right: 55px;
+  border-bottom: none;
   padding: 10px 0px;
   margin-bottom: 10px;
+}
+
+.fa-arrow-alt-circle-down {
+  border-bottom: 1px solid #b3b3b3;
+  padding: 10px 0;
 }
 
 .installation-app  span {
@@ -207,6 +206,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
 
 }
 
@@ -256,10 +256,19 @@ i.fa-heart:hover {
   width: 100%;
   height:
   border: 1px solid black;
+  text-align: center;
 }
 
-.player-button {
+.player-bottom {
+  align-self: center;
+}
+
+.player-button{
   margin-right: 15px;
+}
+
+.no-margin-right {
+  margin-right: 0;
 }
 
 .fa-pause {
@@ -270,6 +279,7 @@ i.fa-heart:hover {
 
 .slider {
   margin: 10px;
+  width: 250px;
   appearance: none;
   height: 2px;
   background: #d3d3d3;
@@ -308,12 +318,28 @@ i.fa-heart:hover {
     display: none;
   }
 
+  #sidebar ul, .menu-bottom, .installation-app{
+    text-align: left;
+  }
+
   #sidebar {
     width: 230px;
+    padding-left: 20px;
   }
 
   #sidebar span, #sidebar p {
-    visibility: visible;
+    display: inline-block;
+  }
+
+  .installation-app {
+    border-bottom: 1px solid #b3b3b3;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+  }
+
+  .fa-arrow-alt-circle-down {
+    border-bottom: none;
+    padding: 0px;
   }
 
   .menu-bottom i {
