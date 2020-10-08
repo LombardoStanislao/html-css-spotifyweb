@@ -69,6 +69,7 @@ a:hover i, a:hover span, a:hover p {
 
 .menu {
   height: 100%;
+  text-align: center;
 }
 
 .menu-bottom {
@@ -222,21 +223,17 @@ footer {
   align-items: center;
   text-align: center;
   line-height: 1.5;
-  padding-left: 20px;
+  padding-left: 5px;
 }
 
 .album-cover img {
   width: 50px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .album-cover a:hover {
   text-decoration: underline;
   color: white;
-}
-
-i.fa-heart {
-  margin-left: 20px;
 }
 
 i {
@@ -254,25 +251,26 @@ i.fa-heart:hover {
 .player {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   max-height: 100%;
+  margin-right: 10px;
+
 }
 
 .player-top {
 
   width: 100%;
-  height:
-  border: 1px solid black;
   text-align: center;
 }
 
 .player-bottom {
-  align-self: center;
-  margin-right: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.player-button{
-  margin-right: 15px;
+.player-top .player-button {
+  margin-right: 0;
 }
 
 .no-margin-right {
@@ -286,8 +284,9 @@ i.fa-heart:hover {
 }
 
 .slider {
+  vertical-align: middle;
   margin: 10px;
-  width: 250px;
+  width: 180px;
   appearance: none;
   height: 2px;
   background: #d3d3d3;
@@ -325,6 +324,14 @@ i.fa-heart:hover {
     outline: none;
     opacity: 0.7;
     transition: opacity .2s;
+  }
+
+  i.fa-heart {
+    margin-left: 20px;
+  }
+
+  .album-cover {
+    padding-left: 20px;
   }
 
 }
@@ -390,6 +397,26 @@ i.fa-heart:hover {
     display: inline-block;
   }
 
+  .footer-option {
+    display: inline-block;
+  }
+
+  #volume {
+    width: 30%;
+    vertical-align: middle;
+  }
+
+  .footer-menu {
+    display: none;
+  }
+
+  .menu {
+    text-align: left;
+  }
+
+  .player-top .player-button{
+    margin-right: 15px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -398,12 +425,12 @@ i.fa-heart:hover {
     display: block;
   }
 
-  .footer-option {
-    display: block;
-  }
-
   .footer-option i {
     padding-right: 15px;
+  }
+
+  .footer-menu {
+    display: inline-block;
   }
 
   #volume {
