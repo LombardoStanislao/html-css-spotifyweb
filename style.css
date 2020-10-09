@@ -419,6 +419,7 @@ i.fa-heart:hover {
   max-height: 100%;
   margin-right: 10px;
   width: 50%;
+  flex-grow: 1;
 
 }
 
@@ -430,13 +431,13 @@ i.fa-heart:hover {
 
 .player-bottom {
   display: flex;
-  justify-content: space-evenly;
+  justify-content:center;
   align-items: center;
   width: 100%;
 }
 
 .player-top .player-button {
-  margin-right: 0;
+  margin: 0 5px;
 }
 
 .no-margin-right {
